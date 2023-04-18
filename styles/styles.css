@@ -1,0 +1,45 @@
+.body {
+  margin: 0;
+}
+.container {
+  text-align: center;
+}
+
+table {
+  margin: 10px auto;
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
+
+#datos {
+  text-align: left;
+}
+
+.row th,
+.row td {
+  padding: 10px;
+  border-top: 0.5px solid grey;
+}
+.row img{
+    width: 70px;
+}
+
+.btn {
+    margin: 25px 0;
+}
+
+@media (min-width: 680px) {
+    .row img{
+        width: 100px;
+    }
+    
+    table {
+        width: 60%;
+    }
+
+    form {
+        width: 60%;
+        margin: 0 auto;
+    }
+}

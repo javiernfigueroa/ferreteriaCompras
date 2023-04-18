@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Metatags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <title>Evaluacion 2</title>
+    <!-- Links -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css"
+      integrity="sha512-V5bj5Zl+V7QzI6Wn9/1v+zFZ1VpXMfNrdWXMV8Kw/OllCcLmS11DCD+02y9pTnAcOd4n+B4q3NC6UZK6vwvug=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <div class="row">
+        <div class="col">
+          <h1>Ferreteria Don Pepe</h1>
+        </div>
+      </div>
+      <!-- Tabla de productos -->
+      <div class="row">
+        <div class="col">
+          <h2>Productos y detalles</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Producto</th>
+                <th>Precio</th>
+                <th>Stock</th>
+                <th>Foto</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Clavos</td>
+                <td>$50</td>
+                <td id="stockClavos">200</td>
+                <td>
+                  <img
+                    id="imgen"
+                    src="/imgs/clavos.jpg"
+                    alt="Imagen de unos clavo"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Pernos</td>
+                <td>$150</td>
+                <td id="stockPernos">150</td>
+                <td>
+                  <img src="/imgs/tornillo.jpg" alt="Imagen de un perno" />
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Tuercas</td>
+                <td>$150</td>
+                <td id="stockTuercas">150</td>
+                <td>
+                  <img src="/imgs/tuercas.jpg" alt="imagen de una tuerca" />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <!-- Estado de pago -->
+      <div class="row">
+        <div class="col">
+          <h2>Estado de pago</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <table id="datos">
+            <thead>
+              <tr>
+                <th>Nombre</th>
+                <th id="th-nombre"></th>
+                <th>Edad</th>
+                <th id="th-edad"></th>
+              </tr>
+            </thead>
+          </table>
+          <table id="estado-pagos">
+            <thead>
+              <tr>
+                <th>Productos</th>
+                <th>Cantidad</th>
+                <th>Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Clavos</td>
+                <td id="cantidad-clavos">0</td>
+                <td id="total-clavos">0</td>
+              </tr>
+              <tr>
+                <td>Pernos</td>
+                <td id="cantidad-pernos">0</td>
+                <td id="total-pernos">0</td>
+              </tr>
+              <tr>
+                <td>Tuercas</td>
+                <td id="cantidad-tuercas">0</td>
+                <td id="total-tuercas">0</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td>Total</td>
+                <td id="total-cantidad">0</td>
+                <td id="total-compra">0</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+      <!-- Formulario -->
+      <div class="row">
+        <div class="col">
+          <h2>Formulario de compra</h2>
+          <form id="miFormulario">
+            <div class="form-group">
+              <label for="nombre">Ingrese su nombre</label>
+              <input
+                type="text"
+                class="form-control"
+                id="nombre"
+                name="nombre"
+                placeholder="Nombre"
+              />
+            </div>
+            <div class="form-group">
+              <label for="edad">Ingrese su edad</label>
+              <input
+                type="number"
+                class="form-control"
+                id="edad"
+                name="edad"
+                placeholder="Edad"
+              />
+            </div>
+            <div class="form-group">
+              <label for="clavos">Cantidad de clavos</label>
+              <input
+                type="number"
+                class="form-control"
+                id="clavos"
+                name="clavos"
+                placeholder="Cantidad de clavos"
+              />
+            </div>
+            <div class="form-group">
+              <label for="pernos">Cantidad de pernos</label>
+              <input
+                type="number"
+                class="form-control"
+                id="pernos"
+                name="pernos"
+                placeholder="Cantidad de pernos"
+              />
+            </div>
+            <div class="form-group">
+              <label for="tuercas">Cantidad de tuercas</label>
+              <input
+                type="number"
+                class="form-control"
+                id="tuercas"
+                name="tuercas"
+                placeholder="Cantidad de tuercas"
+              />
+            </div>
+            <!-- <input type="submit" value="Enviar"> -->
+            <button id="miBtn" type="submit" class="btn btn-primary">
+              Total a pagar
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/js/bootstrap.min.js"
+      integrity="sha512-3H3X9MYy0xQBO0RjvkTwHty+8pmb1l+GgSrgfQX/MX9I4cUL4+4a/AOXJHh71dVJgS6Rud+hyuLrg6U5kVZ5Wg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+
+    <script src="scripts/index.js"></script>
+  </body>
+</html>
