@@ -1,7 +1,7 @@
 $(document).ready(function () {
-  let stockClavos = $("#stockClavos").val();
-  let stockPernos = $("#stockPernos").val();
-  let stockTuercas = $("#stockTuercas").val();
+  let stockClavos = Number(document.getElementById("stockClavos").innerText)
+  let stockPernos = Number(document.getElementById("stockClavos").innerText)
+  let stockTuercas = Number(document.getElementById("stockClavos").innerText)
   $("#miFormulario").validate({
     rules: {
       nombre: {
@@ -14,8 +14,8 @@ $(document).ready(function () {
       },
       clavos: {
         required: true,
-        max: stockClavos,
         min: 0,
+        max: stockClavos,
       },
       pernos: {
         required: true,
